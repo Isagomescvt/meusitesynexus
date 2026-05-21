@@ -1,259 +1,291 @@
- /* --- Configurações Gerais --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+/* --- Configurações Gerais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        body {
-            background-color: #f4f6f9;
-            display: flex;
-            min-height: 100vh;
-        }
+body {
+    background-color: #f4f6f9;
+    min-height: 100vh;
+}
 
-        .container {
-            display: flex;
-            width: 100%;
-            min-height: 100vh;
-        }
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
 
-        /* --- Painel Esquerdo (Azul Escuro) --- */
-        .left-panel {
-            flex: 1.2;
-            /* Fundo com degradê azul escuro e uma imagem de laboratório simulada */
-            background: linear-gradient(135deg, rgba(8, 27, 56, 0.95) 0%, rgba(13, 38, 77, 0.85) 100%), 
-                        url('https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover;
-            color: white;
-            padding: 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            /* Cria o corte diagonal simulando a curva da imagem */
-            clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
-        }
+/* --- Painel Esquerdo (Azul Escuro) --- */
+.left-panel {
+    flex: 1.2;
+    background: linear-gradient(135deg, rgba(8, 27, 56, 0.95) 0%, rgba(13, 38, 77, 0.85) 100%), 
+                url('https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover;
+    color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+}
 
-        .logo-left {
-            display: flex;
-            align-items: center;
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 50px;
-            color: #ff6b00;
-        }
-        .logo-left span { color: white; margin-left: 5px; font-weight: 300; }
-        .logo-left i { margin-left: 10px; color: white; }
+.logo-left {
+    margin-bottom: 40px;
+}
 
-        .left-panel h1 {
-            font-size: 2.8em;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        .left-panel h1 span {
-            color: #ff6b00;
-            display: block;
-        }
-        
-        .divider {
-            width: 40px;
-            height: 3px;
-            background-color: #ff6b00;
-            margin-bottom: 20px;
-        }
+.logo-left img {
+    max-height: 65px;
+    width: auto;
+    display: block;
+}
 
-        .left-panel > p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 50px;
-            max-width: 450px;
-            color: #d1d5db;
-        }
+.left-panel h1 {
+    font-size: 2.5em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.left-panel h1 span {
+    color: #ff6b00;
+}
 
-        .features {
-            display: flex;
-            gap: 20px;
-            max-width: 500px;
-        }
+.divider {
+    width: 40px;
+    height: 3px;
+    background-color: #ff6b00;
+    margin-bottom: 25px;
+}
 
-        .feature-item { flex: 1; }
-        .feature-item i {
-            font-size: 1.8em;
-            color: #ff6b00;
-            margin-bottom: 15px;
-        }
-        .feature-item h3 { font-size: 0.9em; margin-bottom: 8px; font-weight: 600; }
-        .feature-item p { font-size: 0.8em; color: #a1a1aa; line-height: 1.4; }
+.left-panel > p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 450px;
+    color: #d1d5db;
+}
 
-        .copyright {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.7em;
-            color: #9ca3af;
-        }
+.features {
+    display: flex;
+    gap: 20px;
+    max-width: 550px;
+}
 
-        /* --- Painel Direito (Login Branco) --- */
-        .right-panel {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-            background-color: #f4f6f9;
-        }
+.feature-item { 
+    flex: 1; 
+}
+.feature-item i {
+    font-size: 1.6em;
+    color: #ff6b00;
+    margin-bottom: 12px;
+}
+.feature-item h3 { font-size: 0.9em; margin-bottom: 6px; font-weight: 600; }
+.feature-item p { font-size: 0.78em; color: #a1a1aa; line-height: 1.4; }
 
-        .login-card {
-            background-color: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            width: 100%;
-            max-width: 420px;
-            text-align: center;
-        }
+.copyright {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.75em;
+    color: #9ca3af;
+}
 
-        .logo-right {
-            font-size: 3em;
-            color: #081b38;
-            margin-bottom: 10px;
-        }
-        .logo-right .fa-dna { color: #ff6b00; }
+/* --- Painel Direito (Login Branco) --- */
+.right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f4f6f9;
+}
 
-        .login-card h2 { color: #081b38; font-size: 1.5em; margin-bottom: 5px; }
-        .login-card > p { color: #6b7280; font-size: 0.9em; margin-bottom: 30px; }
+.login-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
 
-        .input-group {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-        .input-group label {
-            display: block;
-            font-size: 0.85em;
-            font-weight: 600;
-            color: #081b38;
-            margin-bottom: 8px;
-        }
-        .input-wrapper {
-            position: relative;
-        }
-        .input-wrapper i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #9ca3af;
-        }
-        .input-wrapper input {
-            width: 100%;
-            padding: 12px 15px 12px 40px;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            outline: none;
-            font-size: 0.95em;
-        }
-        .input-wrapper .fa-eye {
-            left: auto;
-            right: 15px;
-            cursor: pointer;
-        }
+.logo-right img {
+    max-height: 70px;
+    width: auto;
+    margin-bottom: 15px;
+}
 
-        .options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85em;
-            margin-bottom: 25px;
-        }
-        .options a { color: #ff6b00; text-decoration: none; }
-        .options label { color: #6b7280; display: flex; align-items: center; gap: 5px; cursor: pointer; }
+.login-card h2 { color: #081b38; font-size: 1.5em; margin-bottom: 5px; }
+.login-card > p { color: #6b7280; font-size: 0.9em; margin-bottom: 25px; }
 
-        .btn-primary {
-            width: 100%;
-            padding: 14px;
-            background-color: #ff6b00;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            margin-bottom: 20px;
-            transition: background 0.3s;
-        }
-        .btn-primary:hover { background-color: #e65c00; }
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+.input-group label {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #081b38;
+    margin-bottom: 8px;
+}
+.input-wrapper {
+    position: relative;
+}
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.95em;
+}
+.input-wrapper .fa-eye {
+    left: auto;
+    right: 15px;
+    cursor: pointer;
+}
 
-        .divider-text {
-            font-size: 0.8em;
-            color: #9ca3af;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        .divider-text::before, .divider-text::after {
-            content: ""; position: absolute; top: 50%; width: 40%; height: 1px; background-color: #e5e7eb;
-        }
-        .divider-text::before { left: 0; }
-        .divider-text::after { right: 0; }
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82em;
+    margin-bottom: 20px;
+}
+.options a { color: #ff6b00; text-decoration: none; }
+.options label { color: #6b7280; display: flex; align-items: center; gap: 5px; cursor: pointer; }
 
-        .btn-outline {
-            width: 100%;
-            padding: 12px;
-            background-color: transparent;
-            color: #ff6b00;
-            border: 1px solid #ff6b00;
-            border-radius: 8px;
-            font-size: 0.95em;
-            font-weight: 600;
-            cursor: pointer;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+}
+.btn-primary:hover { background-color: #e65c00; }
 
-        /* --- Seção do WhatsApp --- */
-        .support-box {
-            background-color: #fffaf5;
-            border: 1px solid #ffe5d0;
-            border-radius: 8px;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-align: left;
-            text-decoration: none; /* Remove o sublinhado do link */
-            transition: transform 0.2s;
-        }
-        .support-box:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(255, 107, 0, 0.1);
-        }
-        .support-icon {
-            background-color: #ffebcc;
-            color: #ff6b00;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-        }
-        .support-text h4 { color: #081b38; font-size: 0.85em; margin-bottom: 3px; }
-        .support-text p { color: #6b7280; font-size: 0.8em; }
-        .support-text .whatsapp-number { color: #25D366; font-weight: bold; }
+.divider-text {
+    font-size: 0.8em;
+    color: #9ca3af;
+    margin-bottom: 15px;
+    position: relative;
+}
+.divider-text::before, .divider-text::after {
+    content: ""; position: absolute; top: 50%; width: 38%; height: 1px; background-color: #e5e7eb;
+}
+.divider-text::before { left: 0; }
+.divider-text::after { right: 0; }
 
-        /* --- Responsividade para Celulares --- */
-        @media (max-width: 900px) {
-            .container { flex-direction: column; }
-            .left-panel { 
-                clip-path: none; /* Remove o corte diagonal no celular */
-                padding: 40px 20px;
-                text-align: center;
-            }
-            .features { flex-direction: column; align-items: center; }
-            .divider { margin: 0 auto 20px auto; }
-            .copyright { position: static; margin-top: 30px; }
-            .right-panel { padding: 20px; }
-        }
+.btn-outline {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: #ff6b00;
+    border: 1px solid #ff6b00;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* --- Seção do WhatsApp --- */
+.support-box {
+    background-color: #fffaf5;
+    border: 1px solid #ffe5d0;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+.support-icon {
+    background-color: #ffebcc;
+    color: #ff6b00;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+}
+.support-text h4 { color: #081b38; font-size: 0.82em; margin-bottom: 2px; }
+.support-text p { color: #6b7280; font-size: 0.78em; }
+.support-text .whatsapp-number { color: #25D366; font-weight: bold; }
+
+/* --- REGRAS DE RESPONSIVIDADE (CELULAR) --- */
+@media (max-width: 900px) {
+    .container { 
+        flex-direction: column; 
+        min-height: auto;
+    }
+    
+    .left-panel { 
+        clip-path: none; 
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .logo-left img {
+        margin: 0 auto;
+    }
+    
+    .left-panel h1 {
+        font-size: 1.8em;
+    }
+
+    .left-panel > p {
+        margin-bottom: 30px;
+    }
+
+    .divider { 
+        margin: 0 auto 20px auto; 
+    }
+
+    .features { 
+        flex-direction: column; 
+        gap: 25px;
+        align-items: center; 
+    }
+
+    .feature-item {
+        max-width: 280px;
+    }
+    
+    .copyright { 
+        position: static; 
+        margin-top: 40px; 
+    }
+    
+    .right-panel { 
+        padding: 30px 15px; 
+    }
+
+    .login-card {
+        padding: 30px 20px;
+    }
+}
